@@ -86,7 +86,7 @@ public class TestRegisterPage extends BaseTest {
 
 		// check errors
 		tester.assertErrorMessages(new String[]{
-			"'invalideEmail' ist keine gültige Email-Adresse.",
+			"Das Feld 'E-Mail' enthält keine gültige E-Mail-Adresse.",
 			"Feld 'Passwort' muss mindestens 3 Zeichen lang sein."
 		});
 		tester.assertNoInfoMessage();

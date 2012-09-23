@@ -92,7 +92,7 @@ public class TestLoginPage extends BaseTest {
 
 		// check errors (no error for too short password)
 		tester.assertErrorMessages(new String[]{
-			"'invalideEmail' ist keine gültige Email-Adresse."
+			"Das Feld 'E-Mail' enthält keine gültige E-Mail-Adresse."
 		});
 		tester.assertNoInfoMessage();
 	}

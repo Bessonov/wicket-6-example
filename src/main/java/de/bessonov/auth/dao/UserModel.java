@@ -18,8 +18,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.wicket.IClusterable;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
+import org.apache.wicket.util.io.IClusterable;
 import org.apache.wicket.util.string.Strings;
 
 import de.bessonov.wicket.dao.DomainObject;

@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bessonov</groupId>
-	<artifactId>wicketexample</artifactId>
+	<artifactId>wicket6example</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Apache Wicket Example</name>
+	<name>Apache Wicket 6 Example</name>
 	<description></description>
 
 	<licenses>
@@ -18,7 +18,7 @@
 	<properties>
 		<source.version>1.6</source.version>
 		
-		<wicket.version>1.5.8</wicket.version>
+		<wicket.version>6.0.0</wicket.version>
 		<jetty.version>8.1.7.v20120910</jetty.version>
 		<slf4j.version>1.7.1</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>

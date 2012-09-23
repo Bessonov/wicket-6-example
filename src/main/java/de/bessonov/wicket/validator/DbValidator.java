@@ -12,6 +12,7 @@
 package de.bessonov.wicket.validator;
 
 import org.apache.wicket.validation.IValidatable;
+import org.apache.wicket.validation.ValidationError;
 import org.apache.wicket.validation.validator.StringValidator;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.criterion.SimpleExpression;
@@ -40,17 +41,12 @@ abstract public class DbValidator extends StringValidator {
 		}
 
 		@Override
-		protected String resourceKey() {
-			return "UniqueInDbValidator.findByProperty." + property;
-		}
-
-		@Override
-		protected void onValidate(IValidatable<String> validatable) {
+		public void validate(IValidatable<String> validatable) {
 			SimpleExpression expression =
 					Restrictions.eq(property, validatable.getValue());
 			Object user = dao.getCriteriaUnique(expression);
 			if(user != null) {
-				error(validatable);
+				validatable.error(new ValidationError(this, "findByProperty." + property));
 			}
 		}
 	}

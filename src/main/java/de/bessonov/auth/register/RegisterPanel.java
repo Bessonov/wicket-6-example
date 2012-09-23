@@ -11,12 +11,13 @@
  ******************************************************************************/
 package de.bessonov.auth.register;
 
+import static org.apache.wicket.validation.validator.StringValidator.minimumLength;
+
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.apache.wicket.validation.validator.EmailAddressValidator;
-import org.apache.wicket.validation.validator.StringValidator.MinimumLengthValidator;
 
 import de.bessonov.auth.dao.UserDao;
 import de.bessonov.auth.dao.UserModel;
@@ -41,7 +42,7 @@ public class RegisterPanel extends Panel {
 
 		// minimum 3 chars length
 		registerForm.add(new PasswordTextField(UserModel.PASSWORD)
-			.add(MinimumLengthValidator.minimumLength(3)));
+			.add(minimumLength(3)));
 
 		add(registerForm);
 	}
