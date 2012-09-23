@@ -1,7 +1,7 @@
 # Apache Wicket 6 Authentication and Authorization Example
 
 Simple example include:
-- Apache Wicket (6.0.0)
+- Apache Wicket (6.0.0, example for Apache Wicket 1.5 you can find [here](https://github.com/Bessonov/wicket-example))
 - Jetty (8.1.7)
 - i18n (English, German)
 - Hibernate (4.1.7, hsqldb is default and mysql example config is included)
@@ -19,8 +19,8 @@ Simple example include:
 
 To run application:
 
-	git clone https://github.com/Bessonov/wicket-example
-	cd wicket-example
+	git clone https://github.com/Bessonov/wicket-6-example
+	cd wicket-6-example
 	mvn jetty:run
 
 To show:
@@ -34,9 +34,9 @@ To package:
 
 To run:
 
-	java -jar target/wicketexmaple-1.0-SNAPSHOT.jar
+	java -jar target/wicket6exmaple-1.0-SNAPSHOT.jar
 	or
-	java -cp target/wicketexmaple-1.0-SNAPSHOT.jar de.bessonov.EmbeddedJettyServer
+	java -cp target/wicket6exmaple-1.0-SNAPSHOT.jar de.bessonov.EmbeddedJettyServer
 
 To show:
 	[http://localhost:8080/](http://localhost:8080/)
@@ -50,8 +50,8 @@ For own package structure you can:
 
 To create archetype:
 
-	git clone https://github.com/Bessonov/wicket-example
-	cd wicket-example/
+	git clone https://github.com/Bessonov/wicket-6-example
+	cd wicket-6-example/
 	mvn clean archetype:create-from-project
 	cd target/generated-sources/archetype/
 	mvn install
@@ -59,7 +59,7 @@ To create archetype:
 And then you can create application:
 
 	cd work_folder
-	mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=de.bessonov -DarchetypeArtifactId=wicketexample-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=my.domain -DartifactId=myproject -Dversion=1.0-SNAPSHOT
+	mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=de.bessonov -DarchetypeArtifactId=wicket6example-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=my.domain -DartifactId=myproject -Dversion=1.0-SNAPSHOT
 
 # License
 Copyright (c) 2012 Anton Bessonov.
